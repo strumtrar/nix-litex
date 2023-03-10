@@ -8,6 +8,12 @@ git_revision = "a6d9955c9d3065d5c04cd4cba392b2fcb831380f"
 type = "github"
 github_user = "litex-hub"
 github_repo = "litex-boards"
+git_revision = "28da4f83ebfbcdb41ec54b3f09dd0696537bb050"
+
+[litex-boards-vexriscv-gateware]
+type = "github"
+github_user = "litex-hub"
+github_repo = "litex-boards"
 git_revision = "b8abdf1b39d322101e5ec88d0e0650b42f836a80"
 
 [liteeth]
@@ -74,7 +80,7 @@ git_revision = "e75700dff2ab9662f3e26dd89ab59a5f6da65687"
 type = "github"
 github_user = "litex-hub"
 github_repo = "pythondata-cpu-vexriscv_smp"
-git_revision = "e8ce95bbff2742226e838a37a88e4153bd04178a"
+git_revision = "98d6db6d44e0b543715ac3af4fb6fa415284fb24"
 
 [pythondata-misc-tapcfg]
 type = "github"

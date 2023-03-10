@@ -29,6 +29,11 @@ pkgs.mkShell {
 
     litex
     litex-boards
+    (pkgs.callPackage ./pkgs/litex-boards-vexriscv-gateware.nix { litex = litex;
+								  litex-boards = litex-boards;
+								  migen = migen;
+    								  pythondata-cpu-vexriscv_smp = pythondata-cpu-vexriscv_smp;
+								})
     litedram
     liteeth
     liteiclink

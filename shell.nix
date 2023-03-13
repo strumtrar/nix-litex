@@ -29,6 +29,7 @@ pkgs.mkShell {
 
     litex
     litex-boards
+    ptxsoc-vexriscv
     litedram
     liteeth
     liteiclink

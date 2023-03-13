@@ -65,7 +65,4 @@ buildPythonPackage rec {
     "--with-sdcard"
     "--build"
   ]));
-
-  installPhase =  "
-  ";
 }

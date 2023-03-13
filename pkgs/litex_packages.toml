@@ -8,13 +8,7 @@ git_revision = "91fbc79ac2e0af4e9edf3a3fe423f98fb7bdeffb"
 type = "github"
 github_user = "litex-hub"
 github_repo = "litex-boards"
-git_revision = "28da4f83ebfbcdb41ec54b3f09dd0696537bb050"
-
-[litex-boards-vexriscv-gateware]
-type = "github"
-github_user = "litex-hub"
-github_repo = "litex-boards"
-git_revision = "b8abdf1b39d322101e5ec88d0e0650b42f836a80"
+git_revision = "f5643e7c78cae4f9c99a37c16e57ff57e179c5cb"
 
 [liteeth]
 type = "github"

@@ -10,6 +10,7 @@ pkgMeta:
 , liteiclink
 , litepcie
 , pythondata-cpu-vexriscv
+, pythondata-cpu-vexriscv_smp
 , litespi
 , litehyperbus
 , valentyusb-hw_cdc_eptri
@@ -49,6 +50,7 @@ buildPythonPackage rec {
     litepcie
     litehyperbus
     pythondata-cpu-vexriscv
+    pythondata-cpu-vexriscv_smp
     litespi
     valentyusb-hw_cdc_eptri
     litevideo

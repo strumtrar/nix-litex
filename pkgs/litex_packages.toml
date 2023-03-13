@@ -8,13 +8,7 @@ git_revision = "a6d9955c9d3065d5c04cd4cba392b2fcb831380f"
 type = "github"
 github_user = "litex-hub"
 github_repo = "litex-boards"
-git_revision = "28da4f83ebfbcdb41ec54b3f09dd0696537bb050"
-
-[litex-boards-vexriscv-gateware]
-type = "github"
-github_user = "litex-hub"
-github_repo = "litex-boards"
-git_revision = "b8abdf1b39d322101e5ec88d0e0650b42f836a80"
+git_revision = "f5643e7c78cae4f9c99a37c16e57ff57e179c5cb"
 
 [liteeth]
 type = "github"
@@ -26,7 +20,7 @@ git_revision = "97dccdb294fa2081536f26f4ef6235c004007432"
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litedram"
-git_revision = "455305a3edc37ee764160344041a4018c7d5ebdd"
+git_revision = "3b2bcf91ede26b8ef1e7bc98282cdd25f8757135"
 
 [litehyperbus]
 type = "github"

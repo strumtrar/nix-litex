@@ -222,6 +222,12 @@ let
         self.callPackage (import ./pythondata-cpu-serv.nix pkgMetas.pythondata-cpu-serv) { };
       pythondata-software-picolibc =
         self.callPackage (import ./pythondata-software-picolibc.nix pkgMetas.pythondata-software-picolibc) { };
+      litex-boards-vexriscv =
+        self.callPackage (import ./ptx-soc/litex-boards-vexriscv.nix) { };
+      litex-boards-vexriscv-split =
+        self.callPackage (import ./ptx-soc/litex-boards-vexriscv-split.nix) { };
+      ptxsoc-vexriscv =
+        self.callPackage (import ./ptx-soc/ptxsoc-vexriscv.nix) { };
     };
 
   applyOverlay = python: python.override {
@@ -256,6 +262,8 @@ let
           "pythondata-software-compiler_rt"
           "pythondata-cpu-serv"
           "pythondata-software-picolibc"
+          "litex-boards-vexriscv"
+          "ptxsoc-vexriscv"
         ]
       ));
 

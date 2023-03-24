@@ -35,12 +35,12 @@ buildPythonPackage rec {
   #version = pkgMeta.git_revision;
   version = "0.2";
 
-  #src = builtins.fetchGit {
-  #  url = "https://github.com/${pkgMeta.github_user}/${pkgMeta.github_repo}";
-  #  rev = pkgMeta.git_revision;
-  #};
+  src = builtins.fetchGit {
+    url = "https://github.com/${pkgMeta.github_user}/${pkgMeta.github_repo}";
+    rev = pkgMeta.git_revision;
+  };
 
-  src = builtins.fetchGit ~/work/customers/ecpix5.vexriscv/litex;
+  #src = builtins.fetchGit ~/work/customers/ecpix5.vexriscv/litex;
 
   propagatedBuildInputs = [
     # LLVM's compiler-rt data downloaded and importable as a python

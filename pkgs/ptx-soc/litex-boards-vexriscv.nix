@@ -67,6 +67,5 @@ buildPythonPackage rec {
   ]));
 
   installPhase =  "
-    cp $out/gw/mem.init $out/gateware.init
   ";
 }

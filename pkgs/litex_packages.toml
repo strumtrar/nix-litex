@@ -2,13 +2,13 @@
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litex"
-git_revision = "a6d9955c9d3065d5c04cd4cba392b2fcb831380f"
+git_revision = "4dabf0a330fd2454c1f9db4c9c978aa2bd754b5f"
 
 [litex-boards]
 type = "github"
 github_user = "litex-hub"
 github_repo = "litex-boards"
-git_revision = "f5643e7c78cae4f9c99a37c16e57ff57e179c5cb"
+git_revision = "3308b6ddf35705377d2996fd2519c55ad65936c4"
 
 [liteeth]
 type = "github"
@@ -20,7 +20,7 @@ git_revision = "97dccdb294fa2081536f26f4ef6235c004007432"
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litedram"
-git_revision = "3b2bcf91ede26b8ef1e7bc98282cdd25f8757135"
+git_revision = "6c8df7cc7be2f88e2d78d6282ada4213918de477"
 
 [litehyperbus]
 type = "github"
@@ -32,19 +32,19 @@ git_revision = "76454e4c0c304a34b9915722de750887c3abbe89"
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "liteiclink"
-git_revision = "1c70ba16477b2743d130051734f0e45e2053b7c4"
+git_revision = "e09593f3da7c8744d53c26b54bf12d691a5ee255"
 
 [litepcie]
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litepcie"
-git_revision = "ebb77b53fafd2d4718e3d307dc0b7bc56d12598b"
+git_revision = "0aa1a629b6468ffeb49e0428ef1d39ec80491d71"
 
 [litescope]
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litescope"
-git_revision = "7105b474026383fff6e3c829e487b56754b6e380"
+git_revision = "457f0875db0c1a0ff0e20659fe81b5bf696875d4"
 
 [litesdcard]
 type = "github"
@@ -68,7 +68,7 @@ git_revision = "41f30143075ece3fff5c33a332ed067d1837cbb3"
 type = "github"
 github_user = "litex-hub"
 github_repo = "pythondata-cpu-vexriscv"
-git_revision = "e75700dff2ab9662f3e26dd89ab59a5f6da65687"
+git_revision = "a36d99eeea984c261e16b744fc1d287c81099777"
 
 [pythondata-cpu-vexriscv_smp]
 type = "github"

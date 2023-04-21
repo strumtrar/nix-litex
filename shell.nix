@@ -52,6 +52,7 @@ pkgs.mkShell {
     yosys
     nextpnr
     icestorm
+    trellis
 
     # For executing the maintenance scripts of this repository
     maintenance

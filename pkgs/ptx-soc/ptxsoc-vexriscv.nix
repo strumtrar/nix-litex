@@ -33,7 +33,7 @@ buildPythonPackage rec {
 
     ecpbram -v -i ptxsoc-vexriscv.config -o ptxsoc_vexriscv_update.config --from gateware.init --to software.init
 
-    ecppack ptxsoc_vexriscv_update.config --svf ptxsoc.svf --bit ptxsoc.bit --bootaddr 0
+    ecppack ptxsoc_vexriscv_update.config --svf ptxsoc.svf --bit ptxsoc.bit --bootaddr 0 --compress
   '';
 
   installPhase = ''

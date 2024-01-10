@@ -222,6 +222,8 @@ let
         self.callPackage (import ./pythondata-cpu-serv.nix pkgMetas.pythondata-cpu-serv) { };
       pythondata-software-picolibc =
         self.callPackage (import ./pythondata-software-picolibc.nix pkgMetas.pythondata-software-picolibc) { };
+      pythondata-misc-usb_ohci =
+        self.callPackage (import ./pythondata-misc-usb_ohci.nix pkgMetas.pythondata-misc-usb_ohci) { };
       litex-boards-vexriscv =
         self.callPackage (import ./ptx-soc/litex-boards-vexriscv.nix) { };
       litex-boards-vexriscv-split =
@@ -272,6 +274,7 @@ let
           "pythondata-software-compiler_rt"
           "pythondata-cpu-serv"
           "pythondata-software-picolibc"
+          "pythondata-misc-usb_ohci"
           "litex-boards-vexriscv"
           "ptxsoc-vexriscv"
         ]

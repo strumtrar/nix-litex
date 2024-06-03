@@ -24,7 +24,7 @@ in
 pkgs.mkShell {
   name = "litex-shell";
   buildInputs = with litexPkgs; with litexPkgs.python3Packages; [
-    python3Packages.migen
+    migen
     openocd
 
     litex

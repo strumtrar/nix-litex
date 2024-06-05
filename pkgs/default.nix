@@ -228,6 +228,8 @@ let
         self.callPackage (import ./ptx-soc/litex-boards-vexriscv.nix) { };
       litex-boards-vexriscv-split =
         self.callPackage (import ./ptx-soc/litex-boards-vexriscv-split.nix) { };
+      rotary-encoder =
+        self.callPackage (import ./ptx-soc/rotary-encoder.nix) { };
       ptxsoc-vexriscv =
         self.callPackage (import ./ptx-soc/ptxsoc-vexriscv.nix) { };
     };

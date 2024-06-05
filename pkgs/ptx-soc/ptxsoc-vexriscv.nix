@@ -17,6 +17,10 @@ buildPythonPackage rec {
 
   unpackPhase = "true";
 
+  dontPatchELF = true;
+  dontFixup = true;
+  dontStrip = true;
+
   nativeBuildInputs = [
     pkgs.trellis
   ];
@@ -27,13 +31,12 @@ buildPythonPackage rec {
   ];
 
   buildPhase = ''
-    cp ${software}/software.init .
-    cp ${gateware}/gateware.init .
-    cp ${gateware}/gw/lambdaconcept_ecpix5.config ptxsoc-vexriscv.config
+    cp ${software}/sw/bios.init bios.init
+    cp -r ${gateware}/* .
 
-    ecpbram -v -i ptxsoc-vexriscv.config -o ptxsoc_vexriscv_update.config --from gateware.init --to software.init
+    ${pkgs.trellis}/bin/ecpbram -v -i gw/lambdaconcept_ecpix5.config -o lambdaconcept_ecpix5_update.config --from gw/included.init --to bios.init
 
-    ecppack ptxsoc_vexriscv_update.config --svf ptxsoc.svf --bit ptxsoc.bit --bootaddr 0 --compress
+    ${pkgs.trellis}/bin/ecppack lambdaconcept_ecpix5_update.config --svf ptxsoc-vexriscv.svf --bit ptxsoc-vexriscv.bit --bootaddr 0
   '';
 
   installPhase = ''

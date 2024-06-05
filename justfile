@@ -23,6 +23,17 @@ lb-vex-start: lb-vex
 ptxsoc-start: ptxsoc
     #!/usr/bin/env bash
     PWD="{{invocation_directory()}}"
+    sudo openFPGALoader -b ecpix5 $PWD/deploy/ptxsoc-vexriscv.bit
+
+ptxsoc-start-dude06:
+    #!/usr/bin/env bash
+    PWD="{{invocation_directory()}}"
+    rsync -avz dude06:/ptx/work/WORK_BOOME/str/YOCTO.BSP-Pengutronix-FPGA/build/tmp/deploy/images/ecpix5-vexriscv/ptxsoc.bit ptxsoc.bit
+    sudo openFPGALoader -b ecpix5 ptxsoc.bit
+
+ptxsoc-start-remote: ptxsoc
+    #!/usr/bin/env bash
+    PWD="{{invocation_directory()}}"
     rsync -avz $PWD/deploy/ptxsoc.bit rlabA-srv:ptxsoc.bit
     ssh rlabA-srv ./openFPGALoader ptxsoc.bit
 

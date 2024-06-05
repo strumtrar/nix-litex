@@ -31,7 +31,7 @@ buildPythonPackage rec {
   #  done
   #'';
 
-  src = builtins.fetchGit ~/work/customers/ecpix5.vexriscv/ptx_ecpix5;
+  src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/ptx_ecpix5;
   unpackPhase = ''
      cp $src/ptx_ecpix5.py $(stripHash ptx_ecpix5.py)
      chmod +x $(stripHash ptx_ecpix5.py)
@@ -54,7 +54,7 @@ buildPythonPackage rec {
   ];
 
   buildPhase = (builtins.concatStringsSep " " ([
-    "${pkgs.python310}/bin/python3 ./ptx_ecpix5.py"
+    "${pkgs.python3}/bin/python3 ./ptx_ecpix5.py"
     "--gateware-dir=$out/gw"
     "--output-dir=$out"
     "--cpu-type vexriscv_smp"

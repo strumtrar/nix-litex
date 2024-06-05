@@ -74,7 +74,7 @@ git_revision = "03d8c47e49872e3db7be5a9a04e7cd74021c41f1"
 type = "github"
 github_user = "litex-hub"
 github_repo = "pythondata-cpu-vexriscv_smp"
-git_revision = "9da054f1d3aa73e20dfa570619e84e858fcb8687"
+git_revision = "180456af77ca663f20791ed562c4c528a1448917"
 
 [pythondata-misc-tapcfg]
 type = "github"

@@ -6,6 +6,7 @@
 , lib
 , litex
 , litex-boards
+, rotary-encoder
 , yosys
 , nextpnr
 , trellis
@@ -32,7 +33,7 @@ buildPythonPackage rec {
   #  done
   #'';
 
-  src = builtins.fetchGit ~/work/customers/ecpix5.vexriscv/ptx_ecpix5;
+  src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/ptx_ecpix5;
   unpackPhase = ''
      cp $src/ptx_ecpix5.py $(stripHash ptx_ecpix5.py)
      chmod +x $(stripHash ptx_ecpix5.py)
@@ -49,26 +50,33 @@ buildPythonPackage rec {
   ];
 
   propagatedBuildInputs = [
-    litex
     litex-boards
     pythondata-cpu-vexriscv_smp
+    rotary-encoder
   ];
 
+  dontPatchELF = true;
+  dontFixup = true;
+  dontStrip = true;
+
   buildPhase = (builtins.concatStringsSep " " ([
-    "${pkgs.python310}/bin/python3 ./ptx_ecpix5.py"
+    "${pkgs.python3}/bin/python3 ./ptx_ecpix5.py"
     "--output-dir=$out"
     "--cpu-type vexriscv_smp"
     "--cpu-variant linux"
     "--sys-clk-freq 50e6"
     "--l2-size 2048"
+    "--with-wishbone-memory"
     "--with-ethernet"
+    "--with-ws2812"
+    "--with-rotary"
     "--with-sdcard"
     "--csr-json $out/csr.json"
   ]) +
    (if buildBitstream then
-       " --build --no-compile-software --gateware-dir=$out/gw"
+       " --build --yosys-quiet --gateware-dir=$out/gw"
     else
-       " --no-compile-gateware --gateware-dir=$out/sw"
+       " --build --yosys-quiet --no-compile-gateware --gateware-dir=$out/sw"
    ) +
    (if buildBitstream then
       " && ${litex}/bin/litex_json2dts_linux --root-device mmcblk0p2 --initrd disabled $out/csr.json > $out/litex-vexriscv-ecpix5.dts"
@@ -77,8 +85,9 @@ buildPythonPackage rec {
   );
 
   installPhase = 
-    (if buildBitstream then
-        "cp $out/gw/mem.init $out/gateware.init"
+    (if buildBitstream then ''
+        touch $out
+       ''
     else
-        "cp $out/sw/mem.init $out/software.init");
+        "touch $out");
 }

@@ -26,6 +26,7 @@ pkgs.mkShell {
   buildInputs = with litexPkgs; with litexPkgs.python3Packages; [
     migen
     openocd
+    microcom
 
     litex
     litex-boards
@@ -41,6 +42,7 @@ pkgs.mkShell {
     pkgsCross.riscv64.buildPackages.gcc
     gnumake
     python3Packages.pyvcd
+    openfpgaloader
 
     # For simulation
     pythondata-misc-tapcfg

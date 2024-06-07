@@ -21,21 +21,14 @@ buildPythonPackage rec {
   version = "1.0";
   format = "other";
 
-  #src = builtins.fetchurl {
-  #    url = "https://github.com/pengutronix/meta-ptx-fpga/raw/master/recipes-synthesis/litex/litex-boards-vexriscv-gateware-1.0/ptx_ecpix5.py";
-  #    sha256 = "0ifj2iw12qcc2c0yryjlxizsgq9hkdb1jpqc64p52xkzxiygflml";
-  #};
+  #src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/ptx_ecpix5;
+  src = builtins.fetchurl {
+      url = "https://github.com/pengutronix/meta-ptx-fpga/raw/next/recipes-synthesis/litex/litex-boards-vexriscv-gateware-1.0/ptx_ecpix5.py";
+      sha256 = "sha256:0w0cbkvxvrwjfsgjwsdyl8q0bsjari0grxdyvbzcyxc078s1smqq";
+  };
 
-  #unpackPhase = ''
-  #  for srcFile in $src; do
-  #    cp $srcFile $(stripHash $srcFile)
-  #    chmod +x $(stripHash $srcFile)
-  #  done
-  #'';
-
-  src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/ptx_ecpix5;
   unpackPhase = ''
-     cp $src/ptx_ecpix5.py $(stripHash ptx_ecpix5.py)
+     cp $src $(stripHash ptx_ecpix5.py)
      chmod +x $(stripHash ptx_ecpix5.py)
   '';
 

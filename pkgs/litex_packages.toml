@@ -50,7 +50,7 @@ git_revision = "976656b5194db2cdf6c3257c5975e4fa1233f859"
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litesdcard"
-git_revision = "1e5595376ae0ad56bed0464bd5774cfc774220da"
+git_revision = "b243b3be4bd2cc038cc2b019c8795bdf5d86d03a"
 
 [litespi]
 type = "github"

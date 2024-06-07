@@ -1,0 +1,37 @@
+From 085109fbf6622c0efbfb6115cac3c09719a6eb30 Mon Sep 17 00:00:00 2001
+From: Steffen Trumtrar <s.trumtrar@pengutronix.de>
+Date: Fri, 7 Jun 2024 13:09:06 +0200
+Subject: [PATCH] HACK: don't add new verilog sources
+
+Signed-off-by: Steffen Trumtrar <s.trumtrar@pengutronix.de>
+---
+ litex/soc/cores/cpu/vexriscv_smp/core.py | 13 -------------
+ 1 file changed, 13 deletions(-)
+
+diff --git a/litex/soc/cores/cpu/vexriscv_smp/core.py b/litex/soc/cores/cpu/vexriscv_smp/core.py
+index f45bce1ab..7842d48a6 100755
+--- a/litex/soc/cores/cpu/vexriscv_smp/core.py
++++ b/litex/soc/cores/cpu/vexriscv_smp/core.py
+@@ -448,19 +448,6 @@ class VexRiscvSMP(CPU):
+ 
+         # Add Cluster.
+         cluster_filename = os.path.join(vdir,  self.cluster_name + ".v")
+-        def add_synthesis_define(filename):
+-            """Add SYNTHESIS define to verilog for toolchains requiring it, ex Gowin"""
+-            synthesis_define = "`define SYNTHESIS\n"
+-            # Read file.
+-            with open(filename, "r") as f:
+-                lines = f.readlines()
+-            # Modify file.
+-            with open(filename, "w") as f:
+-                if lines[0] != synthesis_define:
+-                    f.write(synthesis_define)
+-                for line in lines:
+-                    f.write(line)
+-        add_synthesis_define(cluster_filename)
+         platform.add_source(cluster_filename, "verilog")
+ 
+     def add_soc_components(self, soc):
+-- 
+2.44.1
+

@@ -2,7 +2,7 @@
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litex"
-git_revision = "91fbc79ac2e0af4e9edf3a3fe423f98fb7bdeffb"
+git_revision = "23e654db4c5dab545078304194e94bf6f8699ec4"
 
 [litex-boards]
 type = "github"

@@ -40,7 +40,9 @@ buildPythonPackage rec {
     rev = pkgMeta.git_revision;
   };
 
-  #src = builtins.fetchGit ~/work/customers/ecpix5.vexriscv/litex;
+  patches = [ ./0001-HACK-don-t-add-new-verilog-sources.patch ];
+
+  #src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/litex;
 
   propagatedBuildInputs = [
     # LLVM's compiler-rt data downloaded and importable as a python

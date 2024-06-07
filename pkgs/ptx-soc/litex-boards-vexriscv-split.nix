@@ -63,6 +63,7 @@ buildPythonPackage rec {
     "${pkgs.python3}/bin/python3 ./ptx_ecpix5.py"
     "--output-dir=$out"
     "--cpu-type vexriscv_smp"
+    "--hardware-breakpoints 0"
     "--cpu-variant linux"
     "--sys-clk-freq 50e6"
     "--l2-size 2048"

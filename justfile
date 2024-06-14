@@ -1,5 +1,12 @@
 default: ptxsoc
 
+update:
+    #!/usr/bin/env bash
+    PWD="{{invocation_directory()}}"
+    yes | ./maintenance/update_packages.py pkgs/litex_packages.toml
+    git add pkgs/litex_packages.toml
+    git commit -m "litex_packages: update `date`"
+
 push:
     nix-store --query --references $(nix-instantiate shell.nix) | xargs nix-store --realise | xargs nix-store --query --requisites | cachix push strumtrar-litex
 

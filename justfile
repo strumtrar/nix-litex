@@ -7,8 +7,7 @@ build-all:
     nix-build --arg skipChecks true --arg pkgs 'import <nixpkgs> {}' -A packages pkgs/default.nix | cachix push strumtrar-litex
 
 ptxsoc:
-    nix-build --arg skipChecks true  --keep-failed --arg pkgs 'import <nixpkgs> {}' --out-link deploy -A packages.ptxsoc-vexriscv pkgs/default.nix
-    notify-send -i ~/repos/nixos/users/smull/cfg/x/builder.png 'ptxsoc done'
+    nix-build --arg skipChecks true  --keep-failed --arg pkgs 'import <nixpkgs> {}' --out-link deploy -A packages.ptxsoc-vexriscv pkgs/default.nix | cachix push strumtrar-litex
 
 lb-vex:
     nix-build --arg skipChecks true --arg pkgs 'import <nixpkgs> {}' --out-link lb-vex -A packages.litex-boards-vexriscv pkgs/default.nix

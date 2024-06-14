@@ -24,7 +24,7 @@ buildPythonPackage rec {
   #src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/ptx_ecpix5;
   src = builtins.fetchurl {
       url = "https://github.com/pengutronix/meta-ptx-fpga/raw/next/recipes-synthesis/litex/litex-boards-vexriscv-gateware-1.0/ptx_ecpix5.py";
-      sha256 = "sha256:0w0cbkvxvrwjfsgjwsdyl8q0bsjari0grxdyvbzcyxc078s1smqq";
+      sha256 = "sha256:03jgaj5c5xgs84z2lwvkz7knhsvbiivfvy365d55cnciqjmxyqm9";
   };
 
   unpackPhase = ''

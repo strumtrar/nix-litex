@@ -10,7 +10,14 @@ buildPythonPackage rec {
   version = "1.0";
   format = "other";
 
-  src = builtins.fetchGit ~/work/customers/ecpix.vexriscv/rotary-encoder;
+  encoder = builtins.fetchurl {
+      url = "https://github.com/pengutronix/meta-ptx-fpga/raw/next/recipes-synthesis/litex/rotary-encoder-1.0/encoder.v";
+      sha256 = "sha256:0w8sdaj55ijfn6zyhq7vk9kw985bz9q0mjnygdaf9xfgic855sqy";
+  };
+  core = builtins.fetchurl {
+      url = "https://github.com/pengutronix/meta-ptx-fpga/raw/next/recipes-synthesis/litex/rotary-encoder-1.0/core.py";
+      sha256 = "sha256:1np612ic76yg3ck5r9j2jbhzfak8acqaj3whvchxj7cj06hgl24l";
+  };
 
   unpackPhase = "true";
 
@@ -25,7 +32,7 @@ buildPythonPackage rec {
 
   installPhase = ''
     mkdir -p $out/${pkgs.python3.sitePackages}/rotary_encoder/verilog
-    cp $src/encoder.v $out/${pkgs.python3.sitePackages}/rotary_encoder/verilog/
-    cp $src/core.py $out/${pkgs.python3.sitePackages}/rotary_encoder/
+    cp $encoder $out/${pkgs.python3.sitePackages}/rotary_encoder/verilog/encoder.v
+    cp $core $out/${pkgs.python3.sitePackages}/rotary_encoder/core.py
   '';
 }

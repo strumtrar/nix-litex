@@ -2,25 +2,25 @@
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litex"
-git_revision = "23e654db4c5dab545078304194e94bf6f8699ec4"
+git_revision = "6164a55c6b54f1d9a24cd828ac90d827249fe262"
 
 [litex-boards]
 type = "github"
 github_user = "litex-hub"
 github_repo = "litex-boards"
-git_revision = "f5643e7c78cae4f9c99a37c16e57ff57e179c5cb"
+git_revision = "1b22061e93b2add0132cfbcd10ca0e9977a163b2"
 
 [liteeth]
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "liteeth"
-git_revision = "1ea28bd93a13bbadeccbab127738021b59e79009"
+git_revision = "7d24ac33ae5c8109c48465cf676101b692cf6453"
 
 [litedram]
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litedram"
-git_revision = "e9adaebf0ddc8468d28bffa8523f5a7dd048dfd5"
+git_revision = "6bce3a2587f0d71d72ef2ec9594ae6acd72ec782"
 
 [litehyperbus]
 type = "github"
@@ -32,13 +32,13 @@ git_revision = "76454e4c0c304a34b9915722de750887c3abbe89"
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "liteiclink"
-git_revision = "030e96c23e89953e9f7808c3e2fcdb58c3dee133"
+git_revision = "e0af9e573e6e8054becbb5ce8357eec26b759d15"
 
 [litepcie]
 type = "github"
 github_user = "enjoy-digital"
 github_repo = "litepcie"
-git_revision = "8cd6081284fbc4bef01a6e84d75f2a2bb6e1c278"
+git_revision = "ab7be7185bbd5d02f33bc1b0d2a1e78d75c47f6e"
 
 [litescope]
 type = "github"
@@ -56,7 +56,7 @@ git_revision = "b243b3be4bd2cc038cc2b019c8795bdf5d86d03a"
 type = "github"
 github_user = "litex-hub"
 github_repo = "litespi"
-git_revision = "a18df94acb70b155f839ae95c145122874aaabc3"
+git_revision = "3a0651d91248a8547c13e2365733f02fd6789fb8"
 
 [litevideo]
 type = "github"
@@ -68,13 +68,13 @@ git_revision = "41f30143075ece3fff5c33a332ed067d1837cbb3"
 type = "github"
 github_user = "litex-hub"
 github_repo = "pythondata-cpu-vexriscv"
-git_revision = "03d8c47e49872e3db7be5a9a04e7cd74021c41f1"
+git_revision = "1979a644dbe64d8d32dfbdd970dccee6add63723"
 
 [pythondata-cpu-vexriscv_smp]
 type = "github"
 github_user = "litex-hub"
 github_repo = "pythondata-cpu-vexriscv_smp"
-git_revision = "180456af77ca663f20791ed562c4c528a1448917"
+git_revision = "1f8f8bb49538663759f043e83ebae311132fc3e5"
 
 [pythondata-misc-tapcfg]
 type = "github"

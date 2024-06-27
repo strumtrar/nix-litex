@@ -6,11 +6,10 @@
       nixpkgs.url = "github:nixos/nixpkgs/master";
       flake-utils.url = "github:numtide/flake-utils";
       nix-environments.url = "github:nix-community/nix-environments";
-      davepkgs.url = "github:danderson/nixpkgs/openfpgaloader";
     };
 
 
-  outputs = { self, nixpkgs, flake-utils, nix-environments, davepkgs }:
+  outputs = { self, nixpkgs, flake-utils, nix-environments }:
     flake-utils.lib.eachDefaultSystem
       (system:
         let
@@ -18,7 +17,6 @@
              inherit system;
              overlays = [ ];
            };
-           dave = davepkgs.legacyPackages.${system};
         in
         {
           devShell = import ./shell.nix {

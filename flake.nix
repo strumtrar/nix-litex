@@ -3,7 +3,7 @@
 
   inputs =
     {
-      nixpkgs.url = "gitub:nixos/nixpkgs/master";
+      nixpkgs.url = "github:nixos/nixpkgs/master";
       flake-utils.url = "github:numtide/flake-utils";
       nix-environments.url = "github:nix-community/nix-environments";
       davepkgs.url = "github:danderson/nixpkgs/openfpgaloader";
